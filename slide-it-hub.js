@@ -32,6 +32,23 @@ function slideToggleTheme() {
   });
 }
 
+// ── Back navigation ─────────────────────────────────────────────────────────
+// Auto-injects an "← IT Hub" bar below the header on every page.
+// Add data-hub-root to <body> on the Hub Launcher itself to suppress it.
+document.addEventListener('DOMContentLoaded', function () {
+  if (!document.body.hasAttribute('data-hub-root')) {
+    var header = document.querySelector('.slide-header');
+    if (header) {
+      var nav = document.createElement('div');
+      nav.className = 'slide-back-nav';
+      nav.innerHTML = '<a class="slide-back-link" href="https://sites.google.com/slide.tech/it-hub-launcher/home" target="_blank" rel="noopener">'
+        + '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 11L4 7l5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+        + ' IT Hub</a>';
+      header.insertAdjacentElement('afterend', nav);
+    }
+  }
+});
+
 // ── Standard header HTML ────────────────────────────────────────────────────
 // Call slideRenderHeader(title, subtitle) to inject the standard header
 // into an element with id="slide-header-mount".
