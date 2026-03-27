@@ -233,6 +233,7 @@ body {
   background: var(--card-bg);
   border-radius: 16px;
   margin-bottom: 12px;
+  padding: 20px 22px;
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border);
   color: var(--text-primary);
