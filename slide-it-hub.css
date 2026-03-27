@@ -41,7 +41,7 @@
 [data-theme="dark"] {
   --page-bg:       #070D18;
   --card-bg:       #0D1829;
-  --card-border:   rgba(255,255,255,0.06);
+  --card-border:   rgba(255,255,255,0.13);
   --card-shadow:   0 1px 3px rgba(0,0,0,0.5), 0 4px 18px rgba(0,0,0,0.3);
   --card-shadow-hover: 0 4px 14px rgba(0,0,0,0.6), 0 14px 36px rgba(0,0,0,0.4);
 
@@ -235,8 +235,9 @@ body {
   margin-bottom: 12px;
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border);
+  color: var(--text-primary);
   overflow: hidden;
-  transition: box-shadow 0.22s ease, transform 0.22s ease;
+  transition: box-shadow 0.22s ease, transform 0.22s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
 .card:hover {
